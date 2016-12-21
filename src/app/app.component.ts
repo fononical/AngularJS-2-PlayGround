@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = "Angular App";
+  isActive = true;
+
+    onDivClick() {
+      console.log("Handled by Div");
+    };
+
+    onClick($event) {
+      $event.stopPropagation();
+      console.log("Clicked", $event);
+    };
 }

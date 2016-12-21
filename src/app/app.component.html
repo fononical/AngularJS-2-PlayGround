@@ -1,3 +1,24 @@
 <h1>
   {{title}}
 </h1>
+
+<button class="btn btn-primary" [class.active]="isActive">Submit</button>
+
+<button class="btn btn-primary" 
+    [style.backgroundColor]="isActive ? 'blue' : 'gray'">Cancel</button>
+
+<div (click)="onDivClick()">
+  <button (click)="onClick($event)">Start Click Event</button>
+</div>
+
+<!--<input type="text" [value]="title" (input)="title = $event.target.value"/>
+Preview: {{title}}
+<input type="button" (click)="title = ''" value="Clear" />-->
+
+<input type="text" [(ngModel)]="title" />
+<input type="text" bindon-ngModel="title" />
+
+<rating></rating>
+
+<courses></courses>
+<authors></authors>

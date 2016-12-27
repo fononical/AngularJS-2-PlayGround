@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 /// AUXILIARY FRAMEWORKS & LIBRARIES
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 /// COMPONENTS
 import { AppComponent } from './app.component';
@@ -30,7 +31,8 @@ import { AutoGrowDirective } from './auto-grow.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule
   ],
   providers: [CourseService, AuthorService],
   bootstrap: [AppComponent]

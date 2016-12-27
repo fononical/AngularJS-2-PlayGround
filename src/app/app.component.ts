@@ -16,5 +16,5 @@ export class AppComponent {
     onClick($event) {
       $event.stopPropagation();
       console.log("Clicked", $event);
-    };
+    }
 }

@@ -1,0 +1,7 @@
+<div>
+    <i class="glyphicon glyphicon-heart" 
+        [class.glyphicon-heart]="!isLiked"
+        [style.color]="isLiked ? '#CCC' : 'deeppink'"
+        (click)="onClick($event)">
+    </i>
+</div>

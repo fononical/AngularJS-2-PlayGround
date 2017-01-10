@@ -1,26 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'rating',
-    template: `
-              <div>
-                <i class="glyphicon" 
-                   [class.glyphicon-star-empty]="!isChecked"
-                   [class.glyphicon-star]="isChecked"
-                   (click)="onClick($event)"></i>
-              </div>
-              `         
+    selector: 'favorite',
+    templateUrl: 'app/favorite.template.html'        
 })
 export class RatingComponent {
-    @Input('is-favorite') isChecked: boolean = false;
+    @Input('is-favorite') isFavorite: boolean = false;
+
+    @Output() change = new EventEmitter();
 
     constructor() {
     };
 
     onClick($event) {
       //$event.stopPropagation(); class="glyphicon glyphicon-star-empty"
-      this.isChecked = !this.isChecked;
+      this.isFavorite = !this.isFavorite;
       console.log("Clicked Rating Control:", $event);
+      this.change.emit({ newValue: this.isFavorite });
     };
 
 } 

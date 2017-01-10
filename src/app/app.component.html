@@ -20,7 +20,7 @@ Preview: {{title}}
 <input type="text" [(ngModel)]="title" />
 <input type="text" bindon-ngModel="title" />
 
-<rating [is-favorite]="true"></rating>
+<favorite [is-favorite]="true" (change)="onFavoriteChange($event)"></favorite>
 
 <courses></courses>
 <authors></authors>

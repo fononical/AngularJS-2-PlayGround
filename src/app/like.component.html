@@ -1,7 +1,8 @@
 <div>
     <i class="glyphicon glyphicon-heart" 
-        [class.glyphicon-heart]="!isLiked"
-        [style.color]="isLiked ? '#CCC' : 'deeppink'"
+        [style.color]="isLiked ? 'deeppink' : '#CCC'"
+        [style.cursor]="'pointer'"
         (click)="onClick($event)">
     </i>
+    <p>{{likes}}</p>
 </div>

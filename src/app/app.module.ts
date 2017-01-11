@@ -12,10 +12,12 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { AuthorsComponent } from './authors.component';
 import { RatingComponent } from './rating.component';
+import { LikeComponent } from './like.component';
 
 /// SERVICES
 import { CourseService } from './course.service';
 import { AuthorService } from './author.service';
+import { LikeService } from './like.service';
 
 /// DIRECTIVES
 import { AutoGrowDirective } from './auto-grow.directive';
@@ -26,7 +28,8 @@ import { AutoGrowDirective } from './auto-grow.directive';
     AutoGrowDirective,
     CoursesComponent,
     AuthorsComponent,
-    RatingComponent
+    RatingComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
     HttpModule,
     AlertModule
   ],
-  providers: [CourseService, AuthorService],
+  providers: [CourseService, AuthorService, LikeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

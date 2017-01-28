@@ -1,8 +1,16 @@
 <div>
-    <i class="glyphicon glyphicon-heart" 
-        [style.color]="isLiked ? 'deeppink' : '#CCC'"
-        [style.cursor]="'pointer'"
-        (click)="onClick($event)">
-    </i>
-    <p>{{likes}}</p>
+    <table>
+        <tr>
+            <td>
+                <i class="glyphicon glyphicon-heart" 
+                   [style.color]="isLiked ? 'deeppink' : '#CCC'"
+                   [style.cursor]="'pointer'"
+                   (click)="onClick($event)">
+                </i>    
+            </td>
+            <td>
+                {{ likes }}
+            </td>
+        </tr>
+    </table>
 </div>

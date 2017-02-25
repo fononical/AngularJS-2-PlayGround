@@ -22,7 +22,7 @@ Preview: {{title}}
 
 <favorite [is-favorite]="true" (change)="onFavoriteChange($event)"></favorite>
 
-<like></like>
+<like [totalLikes]="tweet.totalLikes" [iLike]="tweet.iLike"></like>
 
 <courses></courses>
 <authors></authors>

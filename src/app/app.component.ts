@@ -9,6 +9,11 @@ export class AppComponent {
   title = "Angular App";
   isActive = true;
 
+  tweet = {
+    totalLikes: 10,
+    iLike: false
+  }
+
     onDivClick() {
       console.log("Handled by Div");
     };

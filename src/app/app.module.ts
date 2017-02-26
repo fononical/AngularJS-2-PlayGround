@@ -13,6 +13,7 @@ import { CoursesComponent } from './courses.component';
 import { AuthorsComponent } from './authors.component';
 import { RatingComponent } from './rating.component';
 import { LikeComponent } from './like.component';
+import { VoteComponent } from './vote-component/vote.component';
 
 /// SERVICES
 import { CourseService } from './course.service';
@@ -29,7 +30,8 @@ import { AutoGrowDirective } from './auto-grow.directive';
     CoursesComponent,
     AuthorsComponent,
     RatingComponent,
-    LikeComponent
+    LikeComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule,

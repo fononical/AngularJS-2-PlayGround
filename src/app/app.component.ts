@@ -11,7 +11,8 @@ export class AppComponent {
 
   tweet = {
     totalLikes: 10,
-    iLike: false
+    iLike: false,
+    initialVotes: 12
   }
 
     onDivClick() {

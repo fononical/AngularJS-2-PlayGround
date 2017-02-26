@@ -1,0 +1,17 @@
+<div>
+    <table>
+        <tr>
+            <i class="glyphicon glyphicon-menu-up" 
+               [class.highlighted]="isUpVoted"
+               (click)="onUpVoteClick()"></i>
+        </tr>
+        <tr>
+            <span> {{ _totalVotes }} </span>
+        </tr>
+        <tr>
+            <i class="glyphicon glyphicon-menu-down" 
+               [class.highlighted]="isDownVoted"
+               (click)="onDownVoteClick()"></i>
+        </tr>
+    </table>
+</div>

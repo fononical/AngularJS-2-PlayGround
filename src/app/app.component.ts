@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tweet, TweetService } from './services/tweet.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "Angular App";
   isActive = true;
+
+  tweets: Tweet[];
+
+    constructor(tweetService: TweetService) {
+        this.tweets = tweetService.getTweets();
+    };
 
   tweet = {
     totalLikes: 10,

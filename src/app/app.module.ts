@@ -14,11 +14,13 @@ import { AuthorsComponent } from './authors.component';
 import { RatingComponent } from './rating.component';
 import { LikeComponent } from './like.component';
 import { VoteComponent } from './vote-component/vote.component';
+import { TweetComponent } from './tweet-component/tweet.component';
 
 /// SERVICES
 import { CourseService } from './course.service';
 import { AuthorService } from './author.service';
 import { LikeService } from './like.service';
+import { TweetService } from './services/tweet.service';
 
 /// DIRECTIVES
 import { AutoGrowDirective } from './auto-grow.directive';
@@ -27,6 +29,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
   declarations: [
     AppComponent,
     AutoGrowDirective,
+    TweetComponent,
     CoursesComponent,
     AuthorsComponent,
     RatingComponent,
@@ -39,7 +42,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
     HttpModule,
     AlertModule
   ],
-  providers: [CourseService, AuthorService, LikeService],
+  providers: [CourseService, AuthorService, LikeService, TweetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

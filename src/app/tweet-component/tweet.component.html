@@ -1,0 +1,12 @@
+<li class="media, tweet">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="{{ imageURL }}" alt="Profile Image">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ header }}<small>{{ handle }}</small></h4>
+    <span>{{ message }}</span>
+    <like [totalLikes]="likes" [iLike]="false"></like>
+  </div>
+</li>

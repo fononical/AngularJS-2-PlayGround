@@ -7,8 +7,8 @@ import { LikeService } from './like.service';
     styleUrls: ['app/like.component.css']        
 })
 export class LikeComponent {
-    @Input() totalLikes = 0;
-    @Input() iLike = false;
+    @Input() totalLikes:number = 0;
+    @Input() iLike:boolean = false;
 
     onClick() {
         this.iLike = !this.iLike;

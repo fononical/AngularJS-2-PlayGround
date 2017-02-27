@@ -26,5 +26,19 @@ Preview: {{title}}
 
 <vote [initialVotes]="tweet.initialVotes"></vote>
 
+<div class="well">
+  <ul class="media-list">
+    <div *ngFor="let tweet of tweets">
+      <tweet [imageURL]="tweet.imageURL" 
+             [header]="tweet.header" 
+             [handle]="tweet.handle"
+             [message]="tweet.message"
+             [likes]="tweet.likes">
+      </tweet>
+    </div>
+  </ul>
+</div>
+
+
 <courses></courses>
 <authors></authors>

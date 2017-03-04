@@ -1,0 +1,8 @@
+.zippy {
+    width: 400px;
+}
+
+.zippy .header-chevron {
+    float: right;
+    padding: 5px;
+}

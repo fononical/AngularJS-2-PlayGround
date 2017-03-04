@@ -1,0 +1,14 @@
+<div class="zippy panel panel-default">
+    <div class="panel-heading" (click)="onHeaderClicked()">
+        <span class="h3">{{ title }}</span> 
+        <i [ngClass]="{
+            'glyphicon': true,
+            'header-chevron': true,
+            'glyphicon-chevron-down': !isExpanded,
+            'glyphicon-chevron-up': isExpanded
+        }"></i>
+    </div>
+    <div class="panel-body" [hidden]="!isExpanded">
+        <ng-content></ng-content>
+    </div>
+</div>

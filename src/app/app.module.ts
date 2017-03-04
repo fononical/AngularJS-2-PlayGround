@@ -15,6 +15,7 @@ import { RatingComponent } from './rating.component';
 import { LikeComponent } from './like.component';
 import { VoteComponent } from './vote-component/vote.component';
 import { TweetComponent } from './tweet-component/tweet.component';
+import { ZippyComponent } from './zippy-component/zippy.component';
 
 /// SERVICES
 import { CourseService } from './course.service';
@@ -34,7 +35,8 @@ import { AutoGrowDirective } from './auto-grow.directive';
     AuthorsComponent,
     RatingComponent,
     LikeComponent,
-    VoteComponent
+    VoteComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

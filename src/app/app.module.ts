@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 /// AUXILIARY FRAMEWORKS & LIBRARIES
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
@@ -19,6 +20,7 @@ import { ZippyComponent } from './zippy-component/zippy.component';
 
 /// FORMS
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
+import { SignUpFormComponent } from './model-driven-form-component/signup-form.component';
 
 /// SERVICES
 import { CourseService } from './course.service';
@@ -40,13 +42,15 @@ import { AutoGrowDirective } from './auto-grow.directive';
     LikeComponent,
     VoteComponent,
     ZippyComponent,
-    SubscriptionFormComponent
+    SubscriptionFormComponent,
+    SignUpFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule
+    AlertModule,
+    ReactiveFormsModule
   ],
   providers: [CourseService, AuthorService, LikeService, TweetService],
   bootstrap: [AppComponent]

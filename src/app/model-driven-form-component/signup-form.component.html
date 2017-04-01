@@ -1,0 +1,29 @@
+<form [formGroup]="form" 
+      nonvalidate
+      autocomplete="off">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input
+            formControlName="username"
+            id="username"
+            type="text"
+            class="form-control" >
+        <div *ngIf="form?.username?.touched && form?.username?.errors">
+            test
+            <div *ngIf="!form?.username?.errors?.required"
+                class="alert alert-danger">Username is required.</div>
+            <div *ngIf="form?.username?.errors?.cannotContainSpace" 
+                class="alert alert-danger">Username cannot contain space.</div>
+        </div>       
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            formControlName="password"
+            id="password"
+            type="text"
+            class="form-control" >
+    </div>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
